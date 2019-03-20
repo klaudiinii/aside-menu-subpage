@@ -1,0 +1,270 @@
+/*==========  1 - General  ==========*/
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*========== 2 - Header  ==========*/
+
+.header {
+  background-color: #5680e9;
+  height: 60px;
+  display: flex;
+}
+
+#place-holder,
+form {
+  flex-basis: 20%;
+}
+
+.nav-area {
+  display: flex;
+  flex-basis: 60%;
+}
+
+.nav-area > ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-area li {
+  margin-left: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.nav-area li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-area li a:hover {
+  color: #c5e7fc;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+form .btn-search {
+  background-color: transparent;
+  border: transparent;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.btn-search > .fa-search {
+  color: white;
+}
+
+
+form #search {
+  display: none;
+  margin: auto 20px auto 30px;
+  padding: 0 10px;
+  height: 30px;
+  border-radius: 5px;
+  border-style: none;
+}
+
+form #search:focus {
+  outline: none;
+}
+
+.logo-small-screen {
+  display: none;
+}
+
+
+
+/*==========  3 - Main Container  ==========*/
+
+#main-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.aside {
+  flex-basis: 20%;
+}
+
+/*==========  3.1 - Aside Left  ==========*/
+
+.nav-holder {
+  position: fixed;
+  height: 80%;
+  top: 60px;
+  width: 200px;
+  left: -160px;
+  transition: all 0.5s;
+}
+
+.nav-holder.expanded {
+  left: 0;
+}
+
+.nav-holder .nav-items {
+  width: 120px;
+  line-height: 1.7em;
+  margin: 20px;
+}
+
+.nav-items ul li {
+  list-style: none;
+}
+
+.nav-items ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-items ul li a:hover {
+  color: #7f7f7f;
+}
+
+#nav-title,
+#nav-menu,
+#nav-info,
+#media-icons {
+  padding: 10px 0;
+}
+
+#nav-title,
+#nav-menu {
+  border-bottom: 1px dotted #000;
+}
+
+.arrow {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 20px;
+  top: 0;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.arrow span {
+  color: #5a5bea;
+  position: absolute;
+  top: 50%;
+  font-size: 1.5em;
+  transition: all 0.5s;
+}
+
+.arrow span.rotated {
+  transform: rotate(180deg);
+}
+
+/*==========  3.2 - Main Page - Content  ==========*/
+
+#main-content {
+  flex-basis: 60%;
+}
+
+/*==========  3.2.1 - Main Page - Heading  ==========*/
+
+#main-heading {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 100px;
+}
+
+#main-content > #main-heading > .inline-block-item {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  color: #303030;
+}
+
+#main-content > #main-heading h1 {
+  font-size: 1.6em;
+}
+
+/*==========  3.2.2 - Main Page - About  ==========*/
+
+#about {
+  column-count: 2;
+  padding: 10px;
+}
+
+#picture {
+  max-width: 100%;
+  margin: 25px auto;
+}
+
+#about > p {
+  margin-bottom: 20px;
+  line-height: 1.3em;
+  text-align: justify;
+}
+
+#about h2 {
+  font-size: 1.4em;
+  color: #303030;
+}
+
+#about h3 {
+  margin-bottom: 0.5em;
+}
+
+/*==========  4 - Footer  ==========*/
+
+#footer {
+  width: 100%;
+  height: 50px;
+  background-color: #5680e9;
+  margin-top: 50px;
+}
+
+/*==========  5 - Media Queries  ==========*/
+
+@media (max-width: 1170px) {
+
+  .header {
+    display: none;
+  }
+
+  .logo-small-screen {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-holder {
+    top: 0px;
+    bottom: 50px;
+    width: 100%;
+    left: -88%;
+    min-height: 100vh;
+  }
+
+  .nav-holder.expanded {
+    background: #fff;
+  }
+
+  .arrow {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 20px;
+    top: 45%;
+    cursor: pointer;
+    padding: 10px;
+    background-color: transparent;
+  }
+  .arrow span {
+    position: absolute;
+    top: 0;
+    transition: all 0.5s;
+    background-color: transparent;
+  }
+
+}
+
+
+
